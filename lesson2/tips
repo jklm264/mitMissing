@@ -1,0 +1,8 @@
+$convert img.{jpg,png} # so cool!!!
+
+1. $mkdir foo bar
+2. $touch {foo,bar}/{a..j} # then press tab to autocomplete
+
+$diff <(ls foo) <(ls bar)
+
+
