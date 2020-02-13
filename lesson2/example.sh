@@ -4,6 +4,8 @@
 # $# - num of args
 # $$ - pid
 # $? - last execution's exit code
+# $@ - all the arguments
+# !! - entire last command, inlcuding arguments
 
 echo "Starting program at $(date)"
 
