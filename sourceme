@@ -1,0 +1,15 @@
+mcd () {
+	mkdir -p "$1"
+	cd "$_" || exit # This is a good error check!
+}
+
+cwd="."
+
+marco () {
+        cwd=$(pwd)
+}
+
+polo () {
+        cd $cwd
+}
+

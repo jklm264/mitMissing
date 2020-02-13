@@ -1,0 +1,8 @@
+Read man ls and write an ls command that lists files in the following manner
+
+    -Includes all files, including hidden files [-a]
+    -Sizes are listed in human readable format (e.g. 454M instead of 454279954) [-h]
+    -Files are ordered by recency [-tr] # sort by mtime, in reverse
+    -Output is colorized [--color=auto]
+
+$ls -lahtr --color=auto

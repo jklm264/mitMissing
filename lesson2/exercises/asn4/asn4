@@ -1,0 +1,10 @@
+As we covered in lecture find’s -exec can be very powerful for performing operations over the files we are searching for. However, what if we want to do something with all the files, like creating a zip file? As you have seen so far commands will take input from both arguments and STDIN. When piping commands, we are connecting STDOUT to STDIN, but some commands like tar take inputs from arguments. To bridge this disconnect there’s the xargs command which will execute a command using STDIN as arguments. For example ls | xargs rm will delete the files in the current directory.
+
+Zip Usage: $zip <archive_name> <file1> <file2> <file3>
+
+Xargs notes
+* -d delim
+
+ls | xargs zip all_files
+ls | grep ".html" | xargs zip all_html_files
+ls | grep html | xargs -d '\n' zip all_html_filez # Now with white space

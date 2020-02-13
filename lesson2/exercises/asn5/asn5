@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# Write a command or script to recursively find the most recently modified file in a directory. More generally, can you list all files by recency?
+
+MRU_finder () {
+	ls -lath	
+}

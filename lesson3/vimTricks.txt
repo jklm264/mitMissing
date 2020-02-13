@@ -1,0 +1,37 @@
+Vim Tricks
+
+gg and G
+10k or 10j
+{ or }
+. Reruns last cmd
+ctr+R is redo vs u
+yy copies line to clipboard
+p vs P (paste up vs down)
+w next word
+
+:20 goto line 20
+^ takes to beginning of word in line
+b vs w go back/to next word. Capital will ignore punctuation. 
+t! One to the left of ! on a line
+f! Exactly on ! on a line
+
+% will goto the closing }or)
+%d will delete everything between the ({ or })
+D will delete the rest of the line
+C will delete then put in insert mode
+
+cw is change word
+ct} will delete everything up until the }
+dt} ‘’’’
+
+*will toggle to every instance of word used
+
+Capital I will insert
+
+~ swaps case of letter
+
+:help <insert cmd>
+:qa - quit all!
+^ in normal mode will go to the first non-empty character on the line
+Ctlr-u and Ctlr-d is equiv to pgup and gpdn
+L,M,H - put cursor on low, middle, high of a given frame
