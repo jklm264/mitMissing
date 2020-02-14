@@ -19,6 +19,9 @@
   - *OR* vim -p tab1 tab2 tab3
   - rearrange tabs with `:tabm n`
 - **Windows** = Think top and bottom on a single terminal mental picture
+	- sp in normal mode to create a new window
+	- `:Wj` and `:Wk` to switch between windows
 
+## Movements (Nouns)
 
-
+![mvmt_nouns](mvmt_nouns.png)

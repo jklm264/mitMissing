@@ -35,3 +35,4 @@ Capital I will insert
 ^ in normal mode will go to the first non-empty character on the line
 Ctlr-u and Ctlr-d is equiv to pgup and gpdn
 L,M,H - put cursor on low, middle, high of a given frame
+Delete: dw is delete word, d$ is delete to end of line, d0 is delete to beginning of line
