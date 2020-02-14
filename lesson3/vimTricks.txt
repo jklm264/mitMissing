@@ -36,3 +36,9 @@ Capital I will insert
 Ctlr-u and Ctlr-d is equiv to pgup and gpdn
 L,M,H - put cursor on low, middle, high of a given frame
 Delete: dw is delete word, d$ is delete to end of line, d0 is delete to beginning of line
+
+Changing wrapscan option allows you to "wrap" a file while searching. Remember can search with both '/' and '?'.
+
+Type   :%s/old/new/g      to change every occurrence in the whole file.
+Type   :%s/old/new/gc     to find every occurrence in the whole file, with a prompt whether to substitute or not.
+
