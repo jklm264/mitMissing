@@ -42,3 +42,4 @@ Changing wrapscan option allows you to "wrap" a file while searching. Remember c
 Type   :%s/old/new/g      to change every occurrence in the whole file.
 Type   :%s/old/new/gc     to find every occurrence in the whole file, with a prompt whether to substitute or not.
 
+Note: Vim tutor best at 80x24
