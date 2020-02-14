@@ -1,7 +1,8 @@
 ## Data Wrangling 
 
-Linux: journalctl lets you view system log
-Nginx: /var/log/nginx/access.log#
+Linux: `journalctl` lets you view system log
+
+Nginx: `/var/log/nginx/access.log#`
 
 ## Regex reminders with SED
 
@@ -11,9 +12,9 @@ Nginx: /var/log/nginx/access.log#
 `$echo 'abcaba' | sed -E 's/(ab)*//g'` # -E uses modern syntax or '()' need to be backslashed
 `>ca`
 
-![regex](regex.png)
-
 * REGEX debugger: regex101.com 
+
+![regex](regex.png)
 
 ## awk (Another editor)
 
@@ -23,6 +24,6 @@ Nginx: /var/log/nginx/access.log#
 
 `${some cmd that outputs each lines with a number} | paste -sd+ | bc -l`
 
-##Other stuff
+## Other stuff
 
-* Fetch data with curl (webpage), wget (webpage), pup (HTML), jq (JSON)
+* Fetch data with curl (webpage), wget (webpage), [pup (HTML)](https://github.com/ericchiang/pup), jq (JSON)
