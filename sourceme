@@ -13,3 +13,4 @@ polo () {
         cd $cwd
 }
 
+alias mv="mv -i"           # -i prompts before overwrite

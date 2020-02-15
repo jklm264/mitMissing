@@ -76,3 +76,7 @@ Forget `$history | grep <search>`
 
 * TUI: ranger or nnn or tree or broot
 * [autojump z](https://github.com/rupa/z)
+
+## MISC
+
+* $which, $type, $alias
