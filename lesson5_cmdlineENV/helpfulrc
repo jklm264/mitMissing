@@ -12,7 +12,7 @@ down4me() { curl -s "http://downforeveryoneorjustme.com/$1" | sed '/just you/!d;
 ## Things to check out
 # - Pyradio
 
-
+alias open='xdg-open' # for linux only! Mac works just fine :)
 sudo apt-get install ffmpeg vlc -y
 
 Color_Off='\e[0m'
@@ -24,3 +24,26 @@ Blue='\e[0;34m'
 Purple='\e[0;35m'
 Cyan='\e[0;36m'
 White='\e[0;37m'
+
+# Use vim as the editor
+export EDITOR=vim
+
+# Aliases to protect against overwriting
+alias cp='cp -i'
+alias mv='mv -i'
+
+# Serve current directory
+
+serve() {
+    ruby -run -e httpd . -p "${1:-8080}"
+}
+
+# Mirror a website
+alias mirrorsite='wget -m -k -K -E -e robots=off'
+
+
+## Git
+alias ga='git add'
+alias gs='git status'
+alias gmsg='git commit -m $1'
+alias gp='git push'
