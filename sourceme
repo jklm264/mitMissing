@@ -14,3 +14,4 @@ polo () {
 }
 
 alias mv="mv -i"           # -i prompts before overwrite
+alias cp="cp -i"           # -i prompts before overwrite
