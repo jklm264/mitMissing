@@ -1,0 +1,27 @@
+echo "Welcome to aliases"
+
+##### Functions #####
+mcd () {
+	mkdir -p $1
+	cd $_ || exit # This is a good error check!
+}
+cwd="."
+marco () { cwd=$(pwd) ;}
+polo () { cd $cwd ;}
+down4me() { curl -s "http://downforeveryoneorjustme.com/$1" | sed '/just you/!d;s/<[^>]*>//g' ;}   # check if a website is down
+
+##### Aliases #####
+alias mv="mv -i"           # -i prompts before overwrite
+alias cp="cp -i"           # -i prompts before overwrite
+
+##### Exports #####
+# Use vim as the editor
+export EDITOR=vim
+export SSLKEYLOGFILE=~/.ssl-key.log
+
+## Git
+alias ga='git add'
+alias gs='git status'
+alias gmsg='git commit -m $1'
+alias gp='git push'
+

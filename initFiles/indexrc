@@ -1,0 +1,24 @@
+# Globals first!
+
+# Git
+git config --global core.excludesfile ./gitignore_global # Git ignore
+# Git config file
+
+## Aliases
+. aliases
+
+# Machine Specific Commands
+case "$(uname -s)" in
+	Darwin) # MacOS
+		echo -e "\nWe are working with a Mac box today..."
+		. zshrc
+		;;
+	Linux)
+		echo -e "\nWe are working with a Linux box today..."
+		. bashrc
+		;;
+	*) # else
+		echo "Idk Man"	
+		. bashrc
+		;;
+esac

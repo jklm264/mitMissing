@@ -1,0 +1,29 @@
+# echo "Welcome to gitglobals"
+# Thanks to github.com/jonhoo for this list
+
+.DS_Store
+#*#
+*/.#*
+.#*
+*/#*#
+*~
+*.class
+*.hi
+*.o
+*.dat
+*.swp
+.settings
+.project
+.externalToolBuilders
+intermediate
+publish
+.netrwhist
+.lvimrc
+.mutt/cache
+.mutt/aliases
+.vim/spell
+*.pyc
+__pycache__
+.setenv-*
+*.err
+.vscode/settings.json

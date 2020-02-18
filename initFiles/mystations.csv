@@ -1,0 +1,6 @@
+# See step 6 -https://makezine.com/projects/rebroadcast-internet-radio-raspberry-pi/
+Y100 (That soFlo Groove),http://stream.revma.ihrhls.com/zc561/hls.m3u8
+Jazz (Sonic Universe - SomaFM),http://somafm.com/startstream=sonicuniverse.pls
+Chillout (Groove Salad - SomaFM),http://somafm.com/startstream=groovesalad.pls
+ESPN (Sports!),http://espn.edge-1.cis.abacast.net/espn-network-cloud.m3u8?source=espnradio
+Fox Sports Radio (Sports2!),http://c8.prod.playlists.ihrhls.com/4732/playlist.m3u8
