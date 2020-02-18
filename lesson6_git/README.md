@@ -33,11 +33,26 @@
 ## Git Remote(~1:02:00)
 
 * `$git remote` lists all remotes git is aware of for current repo.
+* `$git remote add <name> <url>`
+	* origin is usually convention if only one remote
+* `$git push <remote> <local_branch>:<remote_branch>` sends changes
+* `$git clone <url> <local_dest>` copies it like brand new
+* `$git fetch` - retrieving changes from remote, then do git merge OR just do git pull
+* `$git blame` - shows who last edited which line
+* `$git add -p` (interactive) then hit 's' to split commits then 'y' and 'no'. Then git checkout to throw away the other ones that you didn't use
+* `$git stash` and `$git stash pop`
+* `$git bisect` - when you need to manually search history
 
+### .gitignore files
+```
+.DS_Store
+*.o
+```
 
 ## TMUX reminders
 
 * flip panes - Prefix+{ or } **OR** Prefix+O (oh)
 * switch panes - Prefix+o
-* create pane - Prefix+%
+* create pane veritically - Prefix+%
+* create pane hoizontally - Prefix+"
 * exit tmux - Prefix+x
