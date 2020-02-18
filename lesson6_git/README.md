@@ -56,3 +56,10 @@
 * create pane veritically - Prefix+%
 * create pane hoizontally - Prefix+"
 * exit tmux - Prefix+x
+
+## Mac Easter Egg
+```
+$log show
+> rapportd: (CoreUtils) [com.apple.rapport:CLinkD] Bonjour peer
+```
+
