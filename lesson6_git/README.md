@@ -55,6 +55,7 @@
 * switch panes - Prefix+o
 * create pane veritically - Prefix+%
 * create pane hoizontally - Prefix+"
+* toogle vetical and horizontal - Prefix+<space_bar>
 * exit tmux - Prefix+x
 
 ## Mac Easter Egg
