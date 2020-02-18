@@ -60,6 +60,6 @@
 ## Mac Easter Egg
 ```
 $log show
-> rapportd: (CoreUtils) [com.apple.rapport:CLinkD] Bonjour peer
+> 2020-02-17 22:25:36.197798-0500 0xf87      Default     0x0                  556    0    rapportd: (CoreUtils) [com.apple.rapport:CLinkD] Bonjour unauth peer found <MAC>: CUBonjourDevice MAC2, '<Name>’s iPad'
 ```
 
