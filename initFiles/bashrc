@@ -11,7 +11,7 @@ sudo apt update && sudo apt upgrade -y && sudo apt autoclean
 echo ""
 echo "The weather outside today is..."
 echo ""
-curl -s wttr.in/Tallahassee 2> /dev/null | head -n 7
+python -c "import os;os.system('curl -s wttr.in/' + os.popen('curl -s http://api.geoiplookup.net/?query=$(curl -s https://ipinfo.io/ip)').read().split('city>')[1].split('<')[0] + '|head -n 7')"      
 
 # Aliases
 alias open='xdg-open' # for linux only! Mac works just fine :)
