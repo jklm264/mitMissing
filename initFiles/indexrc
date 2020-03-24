@@ -15,7 +15,10 @@ case "$(uname -s)" in
 		;;
 	Linux)
 		echo -e "\nWe are working with a Linux box today..."
-		. bashrc
+		. init_bash
+		cp ~/.bashrc ~/.bashrc_bkup # Make backup
+		echo "" >> ~/.bashrc # Newline
+		cat bashrc >> ~/.bashrc # Append
 		;;
 	*) # else
 		echo "Idk Man"	
