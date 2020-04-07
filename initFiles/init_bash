@@ -3,19 +3,19 @@ echo ""
 echo "Welcome to Bash, $(whoami)"
 echo ""
 
+# Snap Installs
+echo ""
+echo "Snap installs require password, sorry."
+snap install pyradio > /dev/null 2>&1
+
 # "Always Blue!" 
 sudo -v
-sudo apt update && sudo apt install curl python -y > /dev/null 2>&1
+sudo apt update > /dev/null 2>&1 && sudo apt install curl python -y > /dev/null 2>&1
 
 echo ""
 echo "The weather outside today is..."
 echo ""
 python -c "import os;os.system('curl -s wttr.in/' + os.popen('curl -s http://api.geoiplookup.net/?query=$(curl -s https://ipinfo.io/ip)').read().split('city>')[1].split('<')[0] + '|head -n 7')"      
-
-# Snap Installs
-echo ""
-echo "Snap installs"
-snap install pyradio > /dev/null 2>&1
 
 echo ""
 echo "Apt install"
@@ -37,13 +37,12 @@ sudo add-apt-repository 'deb https://typora.io/linux ./' > /dev/null 2>&1
 sudo apt-get update > /dev/null 2>&1
 sudo apt-get install typora -y > /dev/null 2>&1
 
-echo ""
-echo "Now merge pyradio files with my personal one"
-echo ""
-echo "$cat mystations.csv ~/snap/pyradio/308/.config/pyradio/stations.csv > ~/snap/pyradio/308/.config/pyradio/stations.csv"
+echo -e "We are \e[32finally finished!"
+echo "Do not forget to:"
+echo "  - Download vscode - https://code.visualstudio.com/download"
+echo "  - IDA"
+echo "  - Now merge pyradio files with my personal one"
+echo "\$cat mystations.csv ~/snap/pyradio/308/.config/pyradio/stations.csv > ~/snap/pyradio/308/.config/pyradio/stations.csv"
 echo ""
 
-echo "Do not forget to download:"
-echo "  - vscode - https://code.visualstudio.com/download"
-echo "  - IDA"
-echo ""
+echo -e "\e[31mecho "**You should probably reboot now**"
