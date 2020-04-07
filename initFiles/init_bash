@@ -5,34 +5,38 @@ echo ""
 
 # "Always Blue!" 
 sudo -v
-sudo apt update && sudo apt install curl python -y
+sudo apt update && sudo apt install curl python -y > /dev/null 2>&1
 
 echo ""
 echo "The weather outside today is..."
 echo ""
 python -c "import os;os.system('curl -s wttr.in/' + os.popen('curl -s http://api.geoiplookup.net/?query=$(curl -s https://ipinfo.io/ip)').read().split('city>')[1].split('<')[0] + '|head -n 7')"      
 
+# Snap Installs
+echo ""
+echo "Snap installs"
+snap install pyradio > /dev/null 2>&1
+
 echo ""
 echo "Apt install"
-echo ""
 
 cat packages.list | xargs sudo apt install -y > /dev/null 2>&1 
 
 sudo python -m easy_install --upgrade pyOpenSSL > /dev/null 2>&1 # Volatility crypto warning
 
-echo "apt upgrade and autoremove final"
-sudo apt upgrade -y && sudo apt autoremove -y > /dev/null 2>&1
+echo ""
+echo "Apt upgrade and autoremove final"
+sudo apt upgrade -y > /dev/null 2>&1 
+sudo apt autoremove -y > /dev/null 2>&1
 
 # Typora (Markdown editor)
+echo ""
+echo "Apt install Typora"
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys BA300B7755AFCFAE > /dev/null 2>&1
 sudo add-apt-repository 'deb https://typora.io/linux ./' > /dev/null 2>&1
 sudo apt-get update > /dev/null 2>&1
 sudo apt-get install typora -y > /dev/null 2>&1
 
-# Snap Installs
-echo ""
-echo "Snap installs"
-snap install pyradio > /dev/null 2>&1
 echo ""
 echo "Now merge pyradio files with my personal one"
 echo ""
