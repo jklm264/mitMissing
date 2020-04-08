@@ -1,10 +1,4 @@
-# Aliases
-alias iff='ifconfig wlp3s0 | awk '\''$1 == "inet" {print $2}'\'''
-alias open='xdg-open $1'
-alias uu="sudo apt update && sudo apt upgrade =y && sudo apt autoclean -y && exit"
-
-
-echo "Welcome Mr. Peanut"
+echo "Welcome $(whoami)"
 python -c "import os;os.system('curl -s wttr.in/' + os.popen('curl -s http://api.geoiplookup.net/?query=$(curl -s https://ipinfo.io/ip)').read().split('city>')[1].split('<')[0] + '|head -n 7')"
 
 # Functions
@@ -23,3 +17,13 @@ alias gs='git status'
 alias gmsg='git commit -m $1'
 alias gp='git push'
 alias gc='git clone $1'
+
+# Aliases
+alias open='xdg-open $1'
+alias uu="sudo apt update && sudo apt upgrade =y && sudo apt autoclean -y && exit"
+alias pingg='ping 8.8.8.8'
+alias iff=$(echo "'ifconfig <primary iface> | awk '\''$1 == "inet" {print $2}'\'''")
+alias mv='mv -i' # prompts before overwrite
+alias cp='cp -i' # prompts before overwrite
+alias mkdir='mkdir -p'
+alias ll='ls -alfh'
