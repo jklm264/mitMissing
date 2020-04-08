@@ -10,12 +10,17 @@
 - <C-b>x form
 	- Press Ctrl+b release then press x
 	- Not to be confused with vimsplit's (Ctrl+w & v/s)
+![sessions](session.png)
 - sessions (init $tmux)
-- ![sessions](session.png)
-	- Windows aka tabs
-	- ![windows](window.png)
-		- panes aka like vim splits (same file different location)
-		- ![panes](panes.png) 
+
+![windows](window.png)
+- Windows aka tabs
+
+![panes](panes.png) 
+- panes aka like vim splits (same file different location)
+- Delete pane with `<C-b> x`
+- Resizes the current pane right by 10 cells `<C-b> : ":resize-pane -[R,L,U,D] 10"`
+
 
 ### Dotfiles & Aliases
 

@@ -1,2 +1,8 @@
 #!/bin/zsh
 echo "Welcome to Zsh"
+echo ""
+
+echo "You need to download seperately:"
+progs=('iterm2' 'zsh' 'brew' 'vscode')
+printf '- %s\n' "${progs[@]}"
+
