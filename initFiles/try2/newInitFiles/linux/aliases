@@ -7,7 +7,7 @@ alias mv="mv -i"           # -i prompts before overwrite
 alias cp="cp -i"           # -i prompts before overwrite
 alias mkdir='mkdir -p'
 alias pingg='ping 8.8.8.8'
-alias ll='ls -altF'
+alias ll='ls -alhtF'
 alias tmuxnew='tmux new -s $1'
 # Gets local ip depending on which program is installed
 if [ -f /sbin/ip ]; then
