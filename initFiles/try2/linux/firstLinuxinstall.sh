@@ -7,13 +7,13 @@ snap install pyradio >/dev/null
 
 ##### Always Blue!
 sudo -v
-sudo apt update >/dev/null && sudo apt install curl python -y >/dev/null
+sudo apt-get update >/dev/null && sudo apt-get install curl python -y >/dev/null
 
 ##### Apt installs
-cat packages.list | xargs sudo apt install -y >/dev/null
+cat packages.list | xargs sudo apt-get install -y >/dev/null
 sudo python -m easy_install --upgrade pyOpenSSL >/dev/null # For Volatility Crypto warning
-sudo apt upgrade -y >/dev/null
-sudo apt autoremove -y >/dev/null
+sudo apt-get upgrade -y >/dev/null
+sudo apt-get autoremove -y >/dev/null
 
 ##### Typora (Favorite md editor)
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys BA300B7755AFCFAE > /dev/null
