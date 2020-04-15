@@ -1,6 +1,6 @@
 ##### Welcome Message #####
 echo "Welcome $(whoami)"
-python -c "import os;os.system('curl -s wttr.in/' + os.popen('curl -s http://api.geoiplookup.net/?query=$(curl -s https://ipinfo.io/ip)').read().split('city>')[1].split('<')[0] + '|head -n 7')"
+#python -c "import os;os.system('curl -s wttr.in/' + os.popen('curl -s http://api.geoiplookup.net/?query=$(curl -s https://ipinfo.io/ip)').read().split('city>')[1].split('<')[0] + '|head -n 7')"
 
 ##### File Includes #####
 # Add bash aliases.
