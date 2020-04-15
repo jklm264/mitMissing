@@ -1,3 +1,5 @@
+#!/bin/bash
+
 echo 'This script should be run for first install machines only!'
 
 ##### Snap Installs
