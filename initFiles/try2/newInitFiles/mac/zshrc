@@ -1,0 +1,11 @@
+export EDITOR="vim";
+
+##### History
+HISTFILE=~/.zsh_history
+HISTSIZE=1000
+SAVEHIST=1000
+
+##### Exports
+# npm completion
+. <(npm completion)
+export NODE_PATH="/usr/local/lib/node_modules"

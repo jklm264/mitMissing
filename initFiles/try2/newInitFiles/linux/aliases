@@ -1,0 +1,50 @@
+#####
+#All of these aliases work for both Linux and Mac
+#####
+
+##### General Aliases #####
+alias mv="mv -i"           # -i prompts before overwrite
+alias cp="cp -i"           # -i prompts before overwrite
+alias mkdir='mkdir -p'
+alias pingg='ping 8.8.8.8'
+alias ll='ls -altF'
+alias tmuxnew='tmux new -s $1'
+# Gets local ip depending on which program is installed
+if [ -f /sbin/ip ]; then
+	alias iff='ip a | grep ens33 | awk '\''$1 == "inet" {print $2}'\'''
+else
+	alias iff='ifconfig ens33 | awk '\''$1 == "inet" {print $2}'\'''
+fi
+
+##### CD #####
+alias 1='cd ../'
+alias 2='cd ../../'
+alias 3='cd ../../../'
+alias 4='cd ../../../../'
+alias 5='cd ../../../../../'
+
+##### Git #####
+alias ga='git add'
+alias gs='git status'
+alias gmsg='git commit -m $1'
+alias gp='git push'
+alias gcforensics='git clone https://github.com/jklm264/My-Forensics-Notes.git'
+
+##### Functions #####
+mcd () {
+	mkdir -p $1
+	cd $_ || exit
+}
+
+cwd="."
+marco () { cwd=$(pwd); }
+polo () { cd $cwd; }
+
+
+if [[ "$OSTYPE" == "linux-gnu" ]]; then
+	alias uu='sudo apt update && sudo apt upgrade -y && sudo apt autoclean -y && exit'
+	alias open='xdg-open $1'
+	alias cb='xclip -selection clipboard'
+else # Mac
+	alias uu=~/.updater.sh # Still have to make updater.sh
+fi
