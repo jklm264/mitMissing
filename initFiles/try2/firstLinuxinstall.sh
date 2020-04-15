@@ -32,5 +32,26 @@ echo ""
 echo -e "\e[31m**You should probably reboot now** \e[m"
 
 ##### Move everything over
-cp -rf ./.* ~/. # Last, move all files into correct places
-cp -rf ../shared/* ~/.
+function linky {
+  dest="${HOME}/${1}"
+
+  if [ -h ~/${1} ]; then
+    # Existing symlink
+    echo "Removing existing symlink: ${dest}"
+    rm ${dest}
+
+  elif [ -f "${dest}" ]; then
+    # Existing file
+    rm r ~/$1
+
+  elif [ -d "${dest}" ]; then
+    # Existing dir
+    echo "Backing up existing dir: ${dest}"
+    rm r ~/$1
+  fi
+
+  echo "Creating new symlink: ${dest}"
+  ln -s /home/three/mitmissing/initFiles/try2/shared/$1 ~/$1 
+}
+
+linky .aliases
