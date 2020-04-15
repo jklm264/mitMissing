@@ -26,3 +26,7 @@ echo "  - IDA"
 echo "  - Now merge pyradio files with my personal one"
 echo "\$cat mystations.csv ~/snap/pyradio/308/.config/pyradio/stations.csv > ~/snap/pyradio/308/.config/pyradio/stations.csv"
 echo -e "\e[31m**You should probably reboot now** \e[m"
+
+##### Move everything over
+mv ./.* ~/. # Last, move all files into correct places
+mv ../shared/* ~/.
