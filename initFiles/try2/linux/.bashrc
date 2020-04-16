@@ -21,7 +21,6 @@ shopt -s histappend
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTSIZE=1000
 HISTFILESIZE=2000             
-PROMPT_COMMAND=history -a # To append cmds to the history every time a prompt is shown
 
 ##### Prompt Settings ######
 # set variable identifying the chroot you work in (used in the prompt below)
