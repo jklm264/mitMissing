@@ -31,27 +31,38 @@ echo "\$cat mystations.csv ~/snap/pyradio/308/.config/pyradio/stations.csv > ~/s
 echo ""
 echo -e "\e[31m**You should probably reboot now** \e[m"
 
-##### Move everything over
+##### Link everything
 function linky {
-  dest="${HOME}/${1}"
-
+  hdst="${HOME}/${1}"
+   
+  # Existing symlink
   if [ -h ~/${1} ]; then
-    # Existing symlink
-    echo "Removing existing symlink: ${dest}"
-    rm ${dest}
-
-  elif [ -f "${dest}" ]; then
-    # Existing file
-    rm r ~/$1
-
-  elif [ -d "${dest}" ]; then
-    # Existing dir
-    echo "Backing up existing dir: ${dest}"
-    rm r ~/$1
+    rm ${hdst}
+  # Existing file
+  elif [ -f "${hdst}" ]; then
+    rm -r ~/$1
+  # Existing dir
+  elif [ -d "${hdst}" ]; then
+    rm -r ~/$1
   fi
 
-  echo "Creating new symlink: ${dest}"
-  ln -s /home/three/mitmissing/initFiles/try2/shared/$1 ~/$1 
+  echo "Creating new symlink at: ${hdst}/$1"
+    loc=""
+    if [[ "$2" == "shared" ]];then
+      loc="shared/"
+    elif [[ "$2" == "linux" ]];then
+      loc="linux/"
+    else
+      loc="0"
+    fi
+  
+  ln -s /home/$(whoami)/mitmissing/initFiles/try2/$loc$1 ~/$1 
 }
 
-linky .aliases
+linky .aliases shared
+linky .vimrc shared
+linky .gitconfig shared
+linky .gitignore shared
+linky .gitconfig_local shared
+linky .bashrc linux
+linky .bash_logout linux
