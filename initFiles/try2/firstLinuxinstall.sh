@@ -21,16 +21,6 @@ sudo add-apt-repository 'deb https://typora.io/linux ./' > /dev/null
 sudo apt-get update > /dev/null
 sudo apt-get install typora -y > /dev/null
 
-echo -e "\e[32mWe are finally finished!\e[m"
-echo "Do not forget to:"
-echo "  - Download vscode - https://code.visualstudio.com/download"
-echo "  - IDA"
-echo "  - Now merge pyradio files with my personal one"
-echo ""
-echo "\$cat mystations.csv ~/snap/pyradio/308/.config/pyradio/stations.csv > ~/snap/pyradio/308/.config/pyradio/stations.csv"
-echo ""
-echo -e "\e[31m**You should probably reboot now** \e[m"
-
 ##### Link everything
 function linky {
   hdst="${HOME}/${1}"
@@ -66,3 +56,14 @@ linky .gitignore shared
 linky .gitconfig_local shared
 linky .bashrc linux
 linky .bash_logout linux
+
+echo -e "\e[32mWe are finally finished!\e[m"
+echo "Do not forget to:"
+echo "  - Download vscode - https://code.visualstudio.com/download"
+echo "  - IDA/Ghidra"
+echo "  - Docker"
+echo "  - Now merge pyradio files with my personal one"
+echo ""
+echo "\$cat mystations.csv ~/snap/pyradio/308/.config/pyradio/stations.csv > ~/snap/pyradio/308/.config/pyradio/stations.csv"
+echo ""
+echo -e "\e[31m**You should probably reboot now** \e[m"
