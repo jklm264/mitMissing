@@ -94,9 +94,11 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# Turn off error sound
+bind 'set bell-style none'
 
 ##### Exports ######
+# Default editor is vim
 export EDITOR=vim
 # colored GCC warnings and errors
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
-
