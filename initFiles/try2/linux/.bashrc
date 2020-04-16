@@ -8,11 +8,6 @@ if [ -f .aliases ]; then
 	source .aliases
 fi
 
-# Add bash_profile
-if [ -f .bash_profile ]; then
-	source .bash_profile
-fi
-
 # Add bash_security
 if [ -f .bash_security ]; then
 	source .bash_security
